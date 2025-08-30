@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar forca da senha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <div id="div1">
+        <h2>Verificador de Força de Senha</h2>
+        <p id="p">Insira uma senha para verificar a força</p>
+        <input type="text" id="password" placeholder="Insira a sua senha">
+        <p id="forca-senha"></p>
+
+        <div id="marcacao">
+            <div class="checkbox">
+              <input type="checkbox" class="caixa">
+              <p class="texto">Mais de 8 dígitos</p>
+            </div>
+
+          <div class="checkbox">
+             <input type="checkbox" class="caixa">
+             <p class="texto">Letras maiúsculas</p>
+            </div>
+             <div class="checkbox">
+                <input type="checkbox" class="caixa">
+                <p class="texto">Letras minúsculas</p>
+             </div>
+            <div class="checkbox">
+              <input type="checkbox" class="caixa">
+              <p class="texto">Números</p>
+            </div>
+             <div class="checkbox">
+                 <input type="checkbox" class="caixa">
+                 <p class="texto">Caracteres especiais <span id="diferente"><i>Ex: #, *, /</i></span></p>
+            </div>
+             
+        </div>
+
+    </div>
+</body>
+</html>
