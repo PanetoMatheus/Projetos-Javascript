@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js" defer></script>
+</head>
+<body>
+    <div id="div1" >
+        <h1 id="calculadora">Calculadora de IMC</h1>
+        <label for="altura" class="escrito" required>Altura: </label>
+        <input type="text" class="input" id="altura" placeholder="Exemplo: 1.8" name="altura">
+        <label class="escrito"  for="peso" >Peso: </label>
+        <input type="text" class="input" id="peso" placeholder="Exemplo: 80" name="peso">
+        <div class="botoes">
+             <button id="but1" class="botao">Calcular</button>
+            <button id="but2" class="botao" onclick="limpar()">Limpar</button>
+        </div>
+    </div>
+    
+
+
+   
+
+    <div id="div2" class="hide" >
+        <h1 id="h1">Seu IMC : <span id="imc"></span></h1>
+        <p id="situacao">Situação atual:<span id="spnsituacao"></span></p>
+        <p id="confira"><strong>Confira as classificações: </strong></p>
+
+        <table id="tabela">
+            <tr>
+                <th>IMC</th>
+                <th>Classificação</th>
+                <th>Obesidade</th>
+            </tr>
+            <tr>
+                <td>Menor que 18,5</td>
+                <td>Magreza</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>Entre 18,5 e 24,9</td>
+                <td>Normal</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>Entre 25,0 e 29,9</td>
+                <td>Sobrepeso</td>
+                <td>I</td>
+            </tr>
+
+            <tr>
+                <td>Entre 30,0 e 39,9</td>
+                <td>Obesidade</td>
+                <td>II</td>
+            </tr>
+
+            <tr>
+                <td>Maior que 40,0</td>
+                <td>Obesidade grave</td>
+                <td>III</td>
+            </tr>
+
+        </table>
+        <div id="reini">
+            <button id="red" onclick="reiniciar()">Voltar</button>
+        </div>
+    </div>
+</body>
+</html>
