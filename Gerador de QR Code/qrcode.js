@@ -5,18 +5,22 @@ const criarImagem = (texto, color) => {
     container.appendChild(imagem);
    
     const semhashtag = (color) =>{
+        let str= color;
+        let array;
 
-        let str = color.split("");
-        if(str[0] === '#'){
-             str.shift();
-              str.join("");
+        if(color.match("#")){
+            array= str.split("");
+             array.shift();
+              return array.join("");
         }else{
-                str.join("");
+                return str;
         }
     }
     
-     let newColor = semhashtag(color)
+     let newColor = semhashtag(color);
+     console.log(newColor);
     imagem.src = "https://api.qrserver.com/v1/create-qr-code/?data="+texto+"&size=130x130&bgcolor="+newColor;
+
 
 
 }
@@ -29,7 +33,7 @@ botao.addEventListener("click", () =>{
 let texto = document.getElementById("texto").value;
 let color = document.getElementById("color").value;
 
-console.log(texto)
+
 
 if(texto == ""){
     alert("Digite um texto ou link");
@@ -40,7 +44,6 @@ return
 }
   i++;
 criarImagem(texto, color);
-
 
      let entrada = document.querySelector("#texto");
      entrada.addEventListener("focus", () => {
